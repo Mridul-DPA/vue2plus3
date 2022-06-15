@@ -1,0 +1,31 @@
+{
+  "name": "@vue-bridge/template-monorepo",
+  "private": true,
+  "description": "",
+  "author": "",
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "dev-vue3": "pnpm --filter=example-vue-library-vue3 run dev",
+    "dev-vue2": "pnpm --filter=example-vue-library-vue2 run dev",
+    "build-all": "pnpm -r --aggregate-output run build",
+    "build-watch-all": "pnpm -r --stream run build:w",
+    "test-all": "pnpm -r --parallel --aggregate-output run test ",
+    "lint": "eslint '*.{js,ts}' '{lib-*}/**/*.{js,ts,vue}'",
+    "lint:fix": "eslint '*.{js,ts}' '{lib-*}/**/*.{js,ts,vue}' --fix"
+  },
+  "devDependencies": {
+    "@types/node": "16",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "@vue-bridge/eslint-config": "^0.1.1",
+    "eslint": "^8.15.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "jsdom": "^19.0.0",
+    "tslib": "^2.4.0",
+    "typescript": "~4.6.4",
+    "vite": "^2.9.9",
+    "vitest": "^0.12.6",
+    "vue-tsc": "^0.34.13"
+  }
+}
